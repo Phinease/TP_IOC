@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.17)
+project(TP_IOC)
+
+set(CMAKE_CXX_STANDARD 14)
+
+MACRO(add_exercise name)
+    add_executable(${name} ./test/${name}.cpp)
+    find_package(OpenMP)
+    target_link_libraries(${name} PUBLIC OpenMP::OpenMP_CXX)
+ENDMACRO()
+
+add_exercise("test")
+add_exercise("KnapsackSolvers")
+add_exercise("testBB")
+add_exercise("testHeur")
+add_exercise("testIterHeur")
+add_exercise("testProgDyn")
+add_exercise("testStrategiesBB")
+add_exercise("testSolution")
+add_exercise("testComplexite")
+add_exercise("testComplexiteNBNoeud")
+add_exercise("testAlgos")
+add_exercise("testMN")
